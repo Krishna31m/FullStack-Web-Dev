@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Shine Job Automation Suite">
+    <test name="Shine Job Tests">
+        <classes>
+            <class name="com.automation.shine.ShineJobTest">
+                <methods>
+                    <include name="testLogin"/>
+                    <include name="testJobSearch"/>
+                    <include name="testJobSelection"/>
+                    <include name="testJobApplication"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
