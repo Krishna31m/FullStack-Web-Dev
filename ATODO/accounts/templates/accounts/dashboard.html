@@ -1,0 +1,9 @@
+<h1>Dashboard - Protected Page</h1>
+<p>Welcome {{ user.username }}</p>
+
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form>
+
+

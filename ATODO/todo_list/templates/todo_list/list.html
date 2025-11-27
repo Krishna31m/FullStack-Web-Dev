@@ -1,0 +1,17 @@
+<ul>
+  {% for todo in todos %}
+  <li>{{todo.title}} 
+    <a href="{% url 'todo_update' todo.pk %}">Edit</a> |
+    <a href="{% url 'todo_delete' todo.pk %}">Delete</a>
+  </li>
+  {% empty %}
+  <li>No Data Found</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'todo_create' %}">Create New Todo</a>
+<br>
+
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form>
